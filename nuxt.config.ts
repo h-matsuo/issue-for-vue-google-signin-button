@@ -1,5 +1,5 @@
-
-export default {
+import { Configuration } from '@nuxt/types'
+const config: Configuration = {
   mode: 'spa',
   /*
   ** Headers of the page
@@ -33,6 +33,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxt/typescript-build'
   ],
   /*
   ** Nuxt.js modules
@@ -46,7 +47,8 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend (_config, _ctx) {
     }
   }
 }
+export default config
